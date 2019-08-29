@@ -1,0 +1,12 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "onprem19",
+    "version": "1.8.2",
+    "libraryName": "injectcss-extension",
+    "libraryId": "fd732bc8-8da2-430d-9c8d-bd8093b4dc94",
+    "packageManager": "npm",
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}
