@@ -9,7 +9,7 @@
         "57c34941-ed9a-422b-af65-c841dea1dab8": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "cssFileUrl": "/Style%20Library/custom.css"
           }
         }
       }
@@ -20,7 +20,7 @@
         "57c34941-ed9a-422b-af65-c841dea1dab8": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "cssFileUrl": "/Style%20Library/custom.css"
           }
         }
       }

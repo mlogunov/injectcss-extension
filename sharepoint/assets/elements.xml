@@ -4,6 +4,6 @@
         Title="InjectCss"
         Location="ClientSideExtension.ApplicationCustomizer"
         ClientSideComponentId="57c34941-ed9a-422b-af65-c841dea1dab8"
-        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+        ClientSideComponentProperties="{&quot;cssFileUrl&quot;:&quot;/Style%20Library/custom.css&quot;}">
     </CustomAction>
 </Elements>

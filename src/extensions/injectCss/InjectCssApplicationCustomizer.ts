@@ -3,7 +3,6 @@ import { Log } from '@microsoft/sp-core-library';
 import {
   BaseApplicationCustomizer
 } from '@microsoft/sp-application-base';
-import { Dialog } from '@microsoft/sp-dialog';
 
 import * as strings from 'InjectCssApplicationCustomizerStrings';
 
@@ -16,7 +15,7 @@ const LOG_SOURCE: string = 'InjectCssApplicationCustomizer';
  */
 export interface IInjectCssApplicationCustomizerProperties {
   // This is an example; replace with your own property
-  testMessage: string;
+  cssFileUrl: string;
 }
 
 /** A Custom Action which can be run during execution of a Client Side Application */
@@ -26,13 +25,15 @@ export default class InjectCssApplicationCustomizer
   @override
   public onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
-
-    let message: string = this.properties.testMessage;
-    if (!message) {
-      message = '(No properties were provided.)';
+    const cssFileUrl: string = this.properties.cssFileUrl;
+    if(cssFileUrl){
+      const head: HTMLElement = document.getElementsByTagName('head')[0] || document.documentElement;
+      let customCssLink: HTMLLinkElement = document.createElement('link');
+      customCssLink.href = cssFileUrl;
+      customCssLink.rel = 'stylesheet';
+      customCssLink.type = 'text/css';
+      head.insertAdjacentElement('beforeend', customCssLink);
     }
-
-    Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
 
     return Promise.resolve();
   }
