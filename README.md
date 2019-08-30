@@ -1,26 +1,33 @@
-## injectcss-extension
+# Inject Custom CSS on SharePoint Modern Pages
 
-This is where you include your WebPart documentation.
+## Summary
 
-### Building the code
+Inject a custom Cascading Style Sheet (CSS) on modern pages using SharePoint Framework (SPFx) Extension.
 
-```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
+## Using the project
+
+Clone this repo by executing the following command in your console:
+
+```shell
+git clone https://github.com/mlogunov/injectcss-extension.git
 ```
 
-This package produces the following:
+Navigate to the cloned repository folder which should be the same as the repository name:
 
-* lib/* - intermediate-stage commonjs build artifacts
-* dist/* - the bundled script, along with other resources
-* deploy/* - all resources which should be uploaded to a CDN.
+```shell
+cd injectcss-extension
+```
 
-### Build options
+Now run the following command to install the npm packages:
 
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+```shell
+npm install
+```
+
+This will install the required npm packages and dependencies to build and run the client-side project.
+
+Once the npm packages are installed, run the following command to start nodejs to host your extension and preview that in the SharePoint Online pages:
+
+```shell
+gulp serve
+```
